@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,26 +9,35 @@ using System.Threading.Tasks;
 
 namespace CarApplication
 {
-
-    class Program
+    class Car
     {
-        static void Main(string[] args)
+        // fied member
+
+        //properties
+        public string Name { get; set; }
+        public int Speed { get; set; }
+
+        public int Tyres { get; set; }
+
+
+
+        // method displays car data
+        public void PrintData()
         {
-            // create one car instance
-            Car car = new Car();
-            car.Name = "Audi";
-            car.Tyres = 240;
-            car.Speed = 100;
+            Console.WriteLine("Car Data: ");
+            Console.WriteLine("- name : " + Name);
+            Console.WriteLine("- Tyres : " + Tyres);
+            Console.WriteLine("- speed : " + Speed);
 
+        }
+        // method returns heater data
+        public override string ToString()
+        {
+            return " Name : " + Name + " tyres : " + Tyres + " speed : " + Speed;
 
-            car.PrintData();
-            Console.WriteLine(car.ToString());
-            Console.ReadLine();
         }
     }
 }
-
-
 
 
 
